@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profil Faris Rafiuddin Hannan</title>
+
+  <style>
+    :root {
+      --hijau: #16a34a;        
+      --hijau-tua: #166534;    
+      --hijau-muda: #dcfce7;   
+      --teks: #1f2937;
+      --putih: #ffffff;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }  
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--teks);
+      line-height: 1.6;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    header {
+      background: var(--hijau-tua);
+      position: sticky;   
+      top: 0;
+      z-index: 10;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 14px 0;
+    }
+
+    .logo {
+      color: var(--putih);
+      font-weight: bold;
+      font-size: 1.2rem;
+      text-decoration: none;
+    }
+
+    .menu {
+      display: flex;
+      list-style: none;
+      gap: 24px;
+    }
+
+    .menu a {
+      color: var(--putih);
+      text-decoration: none;
+      padding: 6px 0;
+      border-bottom: 2px solid transparent;
+    }
+
+    .menu a:hover { border-bottom-color: var(--hijau-muda); }
+
+    #toggle { display: none; }
+    .burger {
+      display: none;
+      color: var(--putih);
+      font-size: 1.6rem;
+      cursor: pointer;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, var(--hijau), var(--hijau-tua));
+      color: var(--putih);
+      text-align: center;
+      padding: 90px 0;
+    }
+
+    .hero h1 { font-size: 2.4rem; margin-bottom: 12px; }
+    .hero p  { font-size: 1.1rem; margin-bottom: 28px; opacity: 0.95; }
+
+    .tombol {
+      display: inline-block;
+      background: var(--putih);
+      color: var(--hijau-tua);
+      padding: 12px 28px;
+      border-radius: 999px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .tombol:hover { background: var(--hijau-muda); }
+
+    section { padding: 70px 0; }
+
+    section h2 {
+      color: var(--hijau-tua);
+      font-size: 1.8rem;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    #about { background: var(--hijau-muda); }
+
+    .about-isi {
+      display: flex;
+      align-items: center;
+      gap: 40px;
+    }
+
+    .foto {
+      flex: 0 0 180px;
+      height: 180px;
+      border-radius: 50%;
+      background: var(--hijau);
+      color: var(--putih);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 3.5rem;
+      font-weight: bold;
+      border: 6px solid var(--putih);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+
+    .about-teks p { margin-bottom: 12px; }
+    .about-teks strong { color: var(--hijau-tua); }
+
+    .kontak {
+      text-align: center;
+    }
+
+    .kontak p { margin-bottom: 8px; }
+
+    footer {
+      background: var(--hijau-tua);
+      color: var(--putih);
+      text-align: center;
+      padding: 20px 0;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 700px) {
+      .burger { display: block; }
+
+      .menu {
+        display: none;
+        flex-direction: column;
+        gap: 0;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: var(--hijau-tua);
+        padding: 8px 5%;
+      }
+
+      .menu li { padding: 10px 0; }
+
+      #toggle:checked ~ .menu { display: flex; }
+
+      .hero { padding: 60px 0; }
+      .hero h1 { font-size: 1.8rem; }
+
+      .about-isi {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="container">
+      <nav>
+        <a href="#home" class="logo">Faris R. H.</a>
+
+        <input type="checkbox" id="toggle">
+        <label for="toggle" class="burger">&#9776;</label>
+
+        <ul class="menu">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="container">
+        <h1>Selamat Datang di Websiteku</h1>
+        <p>Halo, saya Faris Rafiuddin Hannan, mahasiswa Pendidikan Teknik Informatika dan Komputer.</p>
+        <a href="#about" class="tombol">Kenali Saya</a>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="container">
+        <h2>Tentang Saya</h2>
+        <div class="about-isi">
+          <div class="foto">FH</div>
+
+          <div class="about-teks">
+            <p>Nama saya <strong>Faris Rafiuddin Hannan</strong>.</p>
+            <p>Saya mahasiswa program studi <strong>Pendidikan Teknik Informatika dan Komputer</strong>.</p>
+            <p>Saya tertarik pada dunia teknologi dan pendidikan, serta sedang belajar membuat website
+               sebagai bagian dari proses belajar saya. Website ini adalah latihan hosting pertama saya.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container kontak">
+        <h2>Kontak</h2>
+        <p>Ingin berkenalan atau berdiskusi? Hubungi saya:</p>
+        <p><strong>Email:</strong> farisrafiuddin82@gmail.com</p>
+        <p><strong>Instagram:</strong> @frdnhnnn</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      &copy; 2026 Faris Rafiuddin Hannan. Dibuat untuk latihan hosting.
+    </div>
+  </footer>
+
+</body>
+</html>
